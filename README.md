@@ -1,74 +1,47 @@
 🛡️ FinShield Bharat
 
-FinShield Bharat is a web-based application designed to help users verify suspicious investment tips, stock alerts, and financial advice received on platforms like WhatsApp and Telegram. It scans text and links to detect potential financial fraud, unrealistic guarantees, and unregistered entities, protecting users from scams.
+FinShield Bharat is a smart web application designed to protect retail investors from financial fraud. It analyzes suspicious investment tips, stock alerts, and links shared on platforms like WhatsApp and Telegram to determine if they are potential scams.
 
-✨ Features
+✨ Key Features
 
-Real-Time Scam Detection: Scans pasted messages for high-risk terms (e.g., "100% daily profit", "zero risk") and suspicious domains.
+Smart Fraud Detection: Scans text for unrealistic guarantees, fake VIP group invitations, and suspicious links.
 
-Multilingual Interface: Easily switch between English, বাংলা (Bengali), and हिन्दी (Hindi) to serve a diverse user base across India.
+Multilingual UI: Accessible in English, Hindi (हिन्दी), and Bengali (বাংলা) to reach a wider audience.
 
-Visual Risk Scoring: Generates a clear risk score (0-100) and provides a clear verdict (Safe, Caution, or High Risk).
+Visual Risk Scoring: Provides a clear 0-100 risk score and categorizes messages as Safe, Caution, or High Risk.
 
-Actionable Advice: Directs users to verify SEBI registrations or report scams to the CyberCrime portal if high risks are detected.
+Actionable Advice: Directs users to verify SEBI registration or report scams to CyberCrime.gov.in.
 
-🛠️ Tech Stack
+🛠️ Technology Stack
 
-Frontend: HTML5, Tailwind CSS (for styling), Vanilla JavaScript
+Frontend: HTML, Tailwind CSS, JavaScript (Vanilla)
 
 Backend: Python, FastAPI, Pydantic
 
-Server: Uvicorn
-
-📁 Project Structure
-
-FinShield Bharat/
-│
-├── backend/
-│   ├── main.py         # Main FastAPI application server
-│   ├── models.py       # Pydantic data models for request/response
-│   └── scanner.py      # Core logic and rules for scanning text/links
-│
-├── frontend/
-│   └── index.html      # Main UI with Tailwind CSS and JS logic integrated
-│
-└── requirements.txt    # Python dependencies
-
-
 🚀 How to Run the Project
 
-1. Start the Backend (Python/FastAPI)
-
-Open a terminal and navigate to the project's root folder.
-
-Install the required dependencies:
+1. Install Dependencies
+Make sure you have Python installed, then run the following command in your terminal:
 
 pip install fastapi uvicorn pydantic
 
 
-Navigate into the backend folder and start the server:
+2. Start the Backend Server
+Navigate to the backend folder and start the FastAPI server:
 
 cd backend
 python main.py
 
 
-You should see a message indicating the server is running on http://0.0.0.0:8000. Leave this terminal open.
+(The server will run on http://localhost:8000)
 
-2. Start the Frontend
+3. Launch the Frontend
+Open the frontend folder and double-click index.html to open it in your web browser (or use VS Code Live Server).
 
-Open your File Explorer.
+🧪 Try it out!
 
-Navigate to the frontend folder.
+Once the app is running, paste this sample text into the input box and click "Scan for Risks" to see the detection in action:
 
-Double-click the index.html file to open it in your default web browser.
-(Alternatively, if using VS Code, right-click index.html and select "Open with Live Server").
+"🚨 VIP STOCK ALERT! Join our premium Telegram group now. 100% daily guaranteed profit! Zero risk on your investment. Sebi approved operators. Click here to double your money fast: http://guaranteed-crypto-profit.com/vip"
 
-🧪 Testing the App
-
-To test the application, copy and paste the following fake scam message into the text box and click Scan for Risks:
-
-"🚨 VIP STOCK ALERT! 🚨 Join our premium Telegram group now. 100% daily guaranteed profit! Zero risk on your investment. Sebi approved operators. Click here to double your money fast: http://guaranteed-crypto-profit.com/vip"
-
-📝 License
-
-This project was built for educational and hackathon purposes.
+Built to empower and protect the everyday investor.
